@@ -1,0 +1,328 @@
+/*Pagina*/
+html{
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(161, 161, 161);
+    zoom: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+html footer{
+    margin-top: 5%;
+}
+body{
+    min-height: 100%;
+    max-width: 100%;
+    display: grid;
+    height: 200%;
+}
+video.video__fundo {
+    z-index: -100;
+    width: 90.5%;
+    position: absolute;
+    display: grid;
+    opacity: 0.6;
+    margin-left: 4.5%;
+    display: none;
+}
+div#body1{
+    display: flex;
+    margin-top: 420px;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.349);
+}
+div.bodyA{
+    background-color: rgb(221, 221, 221);
+    width: 98%;
+    padding-bottom: 30px;
+    top: 0;
+    margin-bottom: 20px;
+    justify-self: center;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+div.bodyB{
+    background-color: rgb(221, 221, 221);
+    border: 20px solid rgb(221, 221, 221);
+    width: 95.5%;
+    padding-bottom: 30px;
+    top: 0;
+    justify-self: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-image: url(https://cdn.jornaldamanha.info/img/normal/180000/normal_00181275_00.jpg?xid=561176);
+    background-position: center;
+    background-size: cover;
+}
+ /*--------------------*/
+/*Caixas de informação*/
+div.infocube {
+    width: 250px;
+    height: 370px;
+    border-radius: 10px;
+    background-image: url(https://cdn0.tudoreceitas.com/pt/posts/1/9/1/coxinha_simples_191_600.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid #2a2a4d46;
+}
+p.borrado {
+    background-color: #c4c4c496;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    height: 100px;
+}
+h4.borrado {
+    background-color: #c4c4c496;
+    border-radius: 10px;
+    padding: 5px 2px 2px 25px;
+    margin-top: 30px;
+}
+a.pretu {
+    color: black;
+}
+img.caco {
+    width: 250px;
+    height: 160px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+/*End of Infocube*/
+/*Inicio Animação de Scroll - Horizontal*/
+.tag-list{
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+.tag-list li {
+    padding: 1rem;
+    background: var(--clr-primary-400);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-400);
+}
+.scroller {
+    overflow-x: auto;
+    width: 95%;
+    position: absolute;
+    z-index: 1;
+    margin-left: -9px;
+    border-radius: 10px;
+}
+.scroller__inner {
+    padding-block: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.scroller[data-animated="true"] {
+    overflow: scroll;
+    mask: linear-gradient(90deg, rgba(0, 0, 0, 0.342), white 20%, white 80%, rgba(0, 0, 0, 0.342));
+}
+.scroller[data-animated="true"] .scroller__inner {
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+}
+@keyframes scroll {
+    to {
+        transform: translate(calc(-137% - 0.5rem));
+    }
+}
+.scroller[data-animated="true"] .scroller__inner:hover {
+    animation-play-state: paused;
+}
+.scroller[data-animated="true"]::-webkit-scrollbar {
+    display: none;
+}
+
+/*End of Scroller*/
+/*Inicio do Slider*/
+#slider{
+    border: 3px solid #0b0b3f;
+    margin-top: 40px;
+    width: 90%;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-left: 4.5%;
+    justify-items: center;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.Slide{
+    width: 25%;
+    position: relative;
+
+}
+.Slide img{
+    width: 100%;
+    height: 450px;
+}
+.manual-nav{
+    position: absolute;
+    width: 89.4%;
+    display: flex;
+    justify-content: center;
+}
+.Manual-btn{
+    border: 2px solid rgb(43, 43, 43);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.Manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.Manual-btn:hover{
+    background-color: rgb(43, 43, 43);
+}
+#radio1:checked ~ .Primeiro{
+    margin-left: 0;
+}
+#radio2:checked ~ .Primeiro{
+    margin-left: -25%;
+}
+#radio3:checked ~ .Primeiro{
+    margin-left: -50%;
+}
+#radio4:checked ~ .Primeiro{
+    margin-left: -75%;
+}
+div.navega div{
+    border: 2px solid skyblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navega{
+    position: absolute;
+    width: 89.4%;
+    margin-top: 413px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.navega div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navega .auto-btn1{
+    background-color: gray;
+}
+#radio2:checked ~ .navega .auto-btn2{
+    background-color: grey;
+}
+#radio3:checked ~ .navega .auto-btn3{
+    background-color: gray;
+}
+#radio4:checked ~ .navega .auto-btn4{
+    background-color: gray;
+}
+div.control{
+    border: 2px solid skyblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.control-left:checked ~ .Primeiro{
+    margin-left: -25%;
+}
+/*End of Slider*/
+/*Inicio oferta 1*/
+.burgueroff{
+    width: 200px;
+    height: 400px;
+    background-color: #0b0b3f;
+    background-image: url(../IMG/Burquer_proBS.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.info_burguer{
+    height: 400px;
+    width: 66%;
+    background-color: #2a2a4d;
+}
+#off {
+    display: flex;
+    margin-top: 6%;
+}
+html #off{
+    justify-content: center;
+}
+#ilustr{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.nna {
+    margin-left: 30px;
+    color: rgb(91, 91, 172);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.par{
+    margin-left: 30px;
+    color: white;
+}
+.cardapio {
+    background-color: #ff7622;
+    width: 98%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+.hh1 {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    margin-top: 0;
+    padding-left: 40px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: bisque;
+}
+img.comida {
+    height: 300px;
+    width: 600px;
+    margin-left: 70px;
+}
+.comida:not(:first-child){
+    margin-left: 100px;
+}
+p.ooo{
+    background-color: rgb(179, 179, 179);
+    width: 560px;
+    margin-left: 100px;
+    padding: 20px;
+    margin-top: -5px;
+
+}
+.ooo:not(:first-child){
+    margin-left: 105px;
+}
+.textoalt{
+    display: flex;
+}
+.imagemsa {
+    margin-left: 30px;
+    margin-top: 50px;
+}
